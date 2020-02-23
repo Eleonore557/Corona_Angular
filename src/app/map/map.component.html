@@ -1,0 +1,29 @@
+<p>Carte prête !</p>
+<div class="row row-map">
+    <div class="col-md-9">
+        <h2 class="heading">Zone</h2>
+        <hr/>
+      <div id="map"></div>
+    </div>
+    <div class="col-md-3 info-container">
+      <div id="run-info">
+        <h2 class="heading">Données</h2>
+        <hr/>
+        <div class="data-heading">Nom:</div>
+        <p class="data-entry">{{ activityName }}</p>
+        <hr/>
+  
+        <div class="data-heading">Date:</div>
+        <p class="data-entry">{{ activityDate | date:"longDate" }} <p>
+        <hr/>
+  
+        <div class="data-heading">Zone couverte:</div>
+        <p class="data-entry">{{ activityDistance }} miles</p>
+        <hr/>
+  
+        <div class="data-heading">Commentaires:</div>
+        <p class="data-entry">{{ activityComments }}</p>
+        <hr/>
+      </div>
+    </div>
+  </div>

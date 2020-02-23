@@ -1,0 +1,36 @@
+<div class="row row-runs">
+    <h2 class="heading">Zone de personnes contaminées par le Corona virus</h2>
+    <hr />
+    <div class="summary">
+      Connexion établie
+      <p class="totals">{{ totalDistance }}</p>
+     Km de zones infectées
+      <p class="totals">{{ totalActivities }}</p>
+      personnes contaminées depuis le 
+      <p class="totals">{{ firstDate | date: 'longDate'}}</p>
+    </div>
+    <hr />
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>Nom</th>
+          <th>Commentaires</th>
+          <th>Date</th>
+          <th>Zone Contaminer</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let activity of activities">
+          <td>
+            <a [routerLink] ="['/zone', activity.id]">
+              {{ activity.name }}
+            </a>
+          </td>
+          <td>{{ activity.comments }}</td>
+          <td>{{ activity.date | date:"dd.MM.yyyy"}}</td>
+          <td>{{ activity.contaminer }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
